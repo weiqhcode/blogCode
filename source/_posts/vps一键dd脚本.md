@@ -34,7 +34,7 @@ ps -A | grep agent
 Press any key to continue...Error! Not Found grub.
 ```
 
-​	重装切换到 Ubuntu 系统就不会出现该错误
+​	Centos下的 grub 是在 /boot 下的 grub2 目录下 所以无法安装成功，重装切换到 Ubuntu 系统就不会出现该错误
 
 ​	腾讯云请先切换 Ubuntu 的镜像源至中科大镜像源，使用默认镜像源会导致下载缓慢
 
