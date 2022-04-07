@@ -14,19 +14,19 @@ categories:
 
 - 我们在安装不同的工具软件的时候，需要安装插件的环境关系
 
-  ​		检查系统版本：cat /etc/redhat-release
+  ​		检查系统版本：`cat /etc/redhat-release`
 
-  ​		查看是否已安装wget: rpm -qa|wget
+  ​		查看是否已安装`wget: rpm -qa|wget`
 
   ​		(注： Linux系统中的wget是一个下载文件的工具)
 
-- ​	否则（结果显示空白）安装：yum -y install wget
+- ​	否则（结果显示空白）安装：`yum -y install wget`
 
   ​		安装g编译器：默认的云服务器都是会安装的。
 
-  ​		查看是否已安装编译器：rpm -qa|gcc
+  ​		查看是否已安装编译器：`rpm -qa|gcc`
 
-  ​		否则（结果显示空白）安装：yum -y install gcc gcc-c++
+  ​		否则（结果显示空白）安装：`yum -y install gcc gcc-c++`
 
 - 为什么要装gcc编译器？
 
@@ -43,11 +43,19 @@ categories:
 
 2. nginx的各种模块中需要使用gzip压缩：
 
+   ```shell
    yum -y install zlib zlib-devel
+   ```
+
+   
 
 3. 安全套接字层密码库
 
+   ```shell
    yum -y install openssl openssI-devel
+   ```
+   
+   ## 全部依赖：
 
 ```shell
 yum install gcc gcc-c++ make unzip pcre pcre-devel zlib zlib-devel libxml2 libxml2-devel  readline readline-devel ncurses ncurses-devel perl-devel perl-ExtUtils-Embed openssl-devel -y
@@ -59,11 +67,13 @@ yum install gcc gcc-c++ make unzip pcre pcre-devel zlib zlib-devel libxml2 libxm
 
 ​	wget http://nginx.org/download/nginx-1.14.0.tar.gz 或者下载好直接上传
 
-​	解压：tar-zxvf nginx-1.14.0.tar.gz
+​	解压：`tar-zxvf nginx-1.14.0.tar.gz`
 
 2. 解压nginx
 
+```
 cd nginx-1.14.0
+```
 
 ![20220320122137.png](https://github.com/weiqh2000/blogImages/blob/main/20220320122137.png?raw=true)
 
@@ -155,7 +165,7 @@ WantedBy=multi-user.target
 
    如果出现
 
-   
+   ![20220320124604.png](https://github.com/weiqh2000/blogImages/blob/main/20220320124604.png?raw=true)
 
    那么输入
 
